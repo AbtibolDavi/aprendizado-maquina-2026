@@ -14,12 +14,12 @@ O repositório está organizado por trabalhos. Cada pasta contém o seu próprio
 ```text
  aprendizado-maquina-2026
  ┣  trabalho_1_naive_bayes/
- ┃ ┣  dataset/                      # Arquivos base (ex: iris_dataset.xlsx)
- ┃ ┣  Trabalho1_NaiveBayes.ipynb    # Código-fonte e experimentos
- ┃ ┗  Artigo_IEEE_NaiveBayes.pdf    # Relatório final formato IEEE
+ ┃ ┣  dataset/                                      # Base de dados
+ ┃ ┣  Trabalho1_NaiveBayes.ipynb                    # Código-fonte e experimentos
+ ┃ ┗  Trabalho_1_Naive_Bayes___Davi_Carvalho.pdf    # Relatório final formato IEEE
  ┣  .gitignore
  ┣  README.md
- ┗  pyproject.toml                  # Arquivos de formatação do Ruff
+ ┗  pyproject.toml                                  # Arquivos de formatação do Ruff
 ```
 
 _(Obs: Novos trabalhos serão adicionados como novas pastas ao longo do semestre)._
