@@ -14,12 +14,17 @@ O repositório está organizado por trabalhos. Cada pasta contém o seu próprio
 ```text
  aprendizado-maquina-2026
  ┣  trabalho_1_naive_bayes/
- ┃ ┣  dataset/                                      # Base de dados
+ ┃ ┣  dataset/                                      # Base de dados (Iris)
  ┃ ┣  Trabalho1_NaiveBayes.ipynb                    # Código-fonte e experimentos
  ┃ ┗  Trabalho_1_Naive_Bayes___Davi_Carvalho.pdf    # Relatório final formato IEEE
+ ┣  trabalho_2/
+ ┃ ┣  dataset/                                      # Base de dados (Câncer de Ovário)
+ ┃ ┣  trabalho_2.ipynb                              # Código-fonte e experimentos
+ ┃ ┗  Trabalho_2_Regressao_Logistica___Davi_Carvalho.pdf # Relatório final formato IEEE
  ┣  .gitignore
  ┣  README.md
- ┗  pyproject.toml                                  # Arquivos de formatação do Ruff
+ ┣  pyproject.toml                                  # Arquivos de formatação do Ruff
+ ┗  requirements.txt                                # Lista de dependências do ambiente
 ```
 
 _(Obs: Novos trabalhos serão adicionados como novas pastas ao longo do semestre)._
@@ -37,13 +42,23 @@ _(Obs: Novos trabalhos serão adicionados como novas pastas ao longo do semestre
 - **Resultados:** Acurácia média de 96.00% ($\pm$ 1.33%).
 - **Bibliotecas:** `numpy`, `pandas`, `matplotlib`, `seaborn`.
 
+### Trabalho 2: Classificação de Câncer de Ovário utilizando Regressão Logística e Redução de Dimensionalidade (PCA)
+
+**Objetivo:** Projetar um regressor logístico de uma camada para identificar pacientes com câncer de ovário através de assinaturas proteômicas originadas de exames de espectrometria de massa.
+
+- **Pré-processamento:** Padronização estatística (`StandardScaler`) e Análise de Componentes Principais (`PCA`) para redução de dimensionalidade (de 100 características originais para 50 componentes principais). Conservação de 99,88% da variância.
+- **Modelo:** Regressão Logística (classificação linear binária).
+- **Validação:** Particionamento estratificado 80/20 (Treino/Teste).
+- **Resultados:** Capacidade analítica perfeita perante os dados de teste, atingindo 100,00% de Acurácia, 100,00% de Sensibilidade e 100,00% de Especificidade (dados linearmente separáveis).
+- **Bibliotecas:** `scikit-learn`, `numpy`, `pandas`, `matplotlib`, `seaborn`, `xlrd`.
+
 ---
 
 ## Como reproduzir o ambiente localmente
 
-Este repositório utiliza as melhores práticas de Engenharia de Software voltadas para Dados. Para garantir extrema velocidade e reprodutibilidade, o gerenciamento de dependências e ambientes virtuais é feito utilizando o [uv](https://github.com/astral-sh/uv) (um instalador Python escrito em Rust).
+Este repositório utiliza as melhores práticas de Engenharia de Software voltadas para Dados. Para garantir extrema velocidade e reprodutibilidade, o gerenciamento de dependências e ambientes virtuais é feito utilizando o [uv](https://github.com/astral-sh/uv) (um instalador Python extremamente rápido escrito em Rust).
 
-**Pré-requisitos:** Python 3.10+ e `uv` instalados. Recomendado o uso de WSL2 (Ubuntu) no Windows ou Linux.
+**Pré-requisitos:** Python 3.10+ e `uv` instalados. Recomendado o uso de WSL2 (Ubuntu) no Windows ou ambientes Linux/macOS.
 
 **1. Clone o repositório:**
 
@@ -59,10 +74,10 @@ uv venv
 source .venv/bin/activate
 ```
 
-**3. Instale as dependências:**
+**3. Instale as dependências automaticamente:**
 
 ```bash
-uv pip install jupyter pandas openpyxl numpy matplotlib seaborn
+uv pip install -r requirements.txt
 ```
 
 **4. Execute os Notebooks:**
