@@ -52,6 +52,16 @@ _(Obs: Novos trabalhos serão adicionados como novas pastas ao longo do semestre
 - **Resultados:** Capacidade analítica perfeita perante os dados de teste, atingindo 100,00% de Acurácia, 100,00% de Sensibilidade e 100,00% de Especificidade (dados linearmente separáveis).
 - **Bibliotecas:** `scikit-learn`, `numpy`, `pandas`, `matplotlib`, `seaborn`, `xlrd`.
 
+### Trabalho 3: Predição de Temperaturas usando Random Forest Regressor
+
+**Objetivo:** Projetar e otimizar modelos baseados no algoritmo _Random Forest_ (Floresta Aleatória) para predizer a temperatura máxima contínua (Regressão) da cidade de Seattle baseando-se em eventos climáticos de dias anteriores.
+
+- **Modelo:** Random Forest Regressor. Estudo aprofundado dos hiperparâmetros `max_depth`, `min_samples_split` e uso de amostragens `bootstrap`.
+- **Pré-processamento:** Separação 75/25 sem padronização de escalonamento (vetores baseados em nós de decisão não-lineares).
+- **Validação e Otimização:** Otimização exaustiva de hiperparâmetros utilizando `RandomizedSearchCV` e extração da métrica de Feature Importances.
+- **Resultados:** Erro Absoluto Médio (MAE) de apenas 3.67 graus atingido por um modelo conservador e resistente ao overfitting, equiparando-se ao modelo otimizado e superando consideravelmente redes superprofundas.
+- **Bibliotecas:** `scikit-learn`, `numpy`, `pandas`, `matplotlib`, `seaborn`.
+
 ---
 
 ## Como reproduzir o ambiente localmente
